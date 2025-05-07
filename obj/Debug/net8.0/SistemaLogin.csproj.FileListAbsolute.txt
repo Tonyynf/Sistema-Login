@@ -27,3 +27,18 @@ C:\Users\tonye\Documents\Clones de repositorios\SistemaLogin\obj\Debug\net8.0\re
 C:\Users\tonye\Documents\Clones de repositorios\SistemaLogin\obj\Debug\net8.0\SistemaLogin.pdb
 C:\Users\tonye\Documents\Clones de repositorios\SistemaLogin\obj\Debug\net8.0\SistemaLogin.genruntimeconfig.cache
 C:\Users\tonye\Documents\Clones de repositorios\SistemaLogin\obj\Debug\net8.0\ref\SistemaLogin.dll
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\bin\Debug\net8.0\SistemaLogin.exe
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\bin\Debug\net8.0\SistemaLogin.deps.json
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\bin\Debug\net8.0\SistemaLogin.runtimeconfig.json
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\bin\Debug\net8.0\SistemaLogin.dll
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\bin\Debug\net8.0\SistemaLogin.pdb
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\SistemaLogin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\SistemaLogin.AssemblyInfoInputs.cache
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\SistemaLogin.AssemblyInfo.cs
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\SistemaLogin.csproj.CoreCompileInputs.cache
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\SistemaLogin.sourcelink.json
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\SistemaLogin.dll
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\refint\SistemaLogin.dll
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\SistemaLogin.pdb
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\SistemaLogin.genruntimeconfig.cache
+C:\Users\anthonyencarnacao\Documents\Repository clones\SistemaLogin\obj\Debug\net8.0\ref\SistemaLogin.dll

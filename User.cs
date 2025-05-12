@@ -14,5 +14,5 @@ public class User{
         this.nome = nome;
         this.email = email;
         this.senhaHash = HashHelper.GerarHash(senha);
-    }
+    }     
 }

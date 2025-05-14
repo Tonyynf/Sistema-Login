@@ -20,7 +20,7 @@ public class Program
             Console.Write("Senha: ");
                 string Senha = Console.ReadLine();
                 
-                User user2 = new User(nomeCompleto, Email, Senha);
+            //usuarios.Add(new Usuario { Id = proximoId++, Nome = nome });
             
                 break;
             case 2:

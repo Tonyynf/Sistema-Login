@@ -10,7 +10,7 @@ public class UserRepository{
     
     public void ShowUsers(){
         foreach(User User in Users){
-            Console.WriteLine($"{User.nome} - {User.email}");
+            Console.WriteLine($"{User.Id} - {User.nome} - {User.email}");
         }
         //Fazer aviso caso não possua usuarios
     }

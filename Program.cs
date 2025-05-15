@@ -25,13 +25,15 @@ public class Program
                     string Senha = Console.ReadLine();
 
                     userRepository.AddUser(nomeCompleto, Email, Senha);
-                    //usuarios.Add(new Usuario { Id = proximoId++, Nome = nome });
-
+                
                     break;
                 case 2:
                     userRepository.ShowUsers();
                     break;
                 case 3:
+                    Console.Write("Digite o número do seu id: "); //Colocar tipo uma "certeza que é sua conta"
+                    int id = int.Parse(Console.ReadLine());
+                    userRepository.DeleteUser(id);
                     break;
                 case 4:
                     break;
@@ -42,7 +44,7 @@ public class Program
                     Console.WriteLine("Opção Inválida!");
                     break;
             }
-            Console.Clear();
+            
         }
     }
 }

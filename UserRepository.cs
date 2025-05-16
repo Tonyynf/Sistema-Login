@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 public class UserRepository
 {
@@ -13,24 +14,33 @@ public class UserRepository
 
     public void ShowUsers()
     {
-        if (Users.Count == 0)
-        {
+        if (Users.Count == 0){
             Console.WriteLine("Nenhum usuário cadastrado.");
-        }
-        else
-        {
+        }else{
             Console.WriteLine("ID - Nome - Email");
-            foreach (User User in Users)
-            {
+            foreach (User User in Users){
                 Console.WriteLine($"{User.Id} - {User.nome} - {User.email}");
             }
         }
-        //Fazer aviso caso não possua usuarios
     }
 
-    public void UpdateUser(int id)
-    {
+    public void UpdateUser(int id, string nome, string email){
+        var user = Users.Find(u => u.Id == id);
+        if (user == null)
+        {
+        Console.WriteLine("Usuário não encontrado.");
+        return;
+        }
 
+    Console.Write("Digite um novo nome: ");
+    string novoNome = Console.ReadLine();
+
+    Console.Write("Digite um novo email: ");
+    string novoEmail = Console.ReadLine();
+
+    user.AtualizarDados(novoNome, novoEmail); // usando método da classe User
+
+    Console.WriteLine("Usuário atualizado!");
     }
 
     public void DeleteUser(int id)

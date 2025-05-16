@@ -10,7 +10,7 @@ public class Program
         var userRepository = new UserRepository();
         while (true)
         {
-            Console.WriteLine("Menu:\n1 - Cadastro\n2 - Mostrar lista de usuarios\n3 - Exclusão de conta\n4 - Alteração dados\n5 - Sair");
+            Console.WriteLine("Menu:\n1 - Cadastrar\n2 - Listar usuários\n3 - Alteração dados\n4 - Excluir conta\n5 - Sair");
             //Adicionar no menu a opção - login -
             int op = int.Parse(Console.ReadLine());
 
@@ -25,17 +25,18 @@ public class Program
                     string Senha = Console.ReadLine();
 
                     userRepository.AddUser(nomeCompleto, Email, Senha);
-                
                     break;
                 case 2:
                     userRepository.ShowUsers();
                     break;
                 case 3:
+                    Console.WriteLine("Digite o número do seu id: ");
+                    int numId = int.Parse(Console.ReadLine());
+                    break;
+                case 4:
                     Console.Write("Digite o número do seu id: "); //Colocar tipo uma "certeza que é sua conta"
                     int id = int.Parse(Console.ReadLine());
                     userRepository.DeleteUser(id);
-                    break;
-                case 4:
                     break;
                 case 5:
                     Environment.Exit(0);
@@ -44,7 +45,9 @@ public class Program
                     Console.WriteLine("Opção Inválida!");
                     break;
             }
-            
+            Console.WriteLine("Aperte qualquer tecla para continuar...");
+            Console.ReadKey();  
+            Console.Clear();
         }
     }
 }

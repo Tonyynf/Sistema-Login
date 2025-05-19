@@ -32,14 +32,7 @@ public class UserRepository
         return;
         }
 
-    Console.Write("Digite um novo nome: ");
-    string novoNome = Console.ReadLine();
-
-    Console.Write("Digite um novo email: ");
-    string novoEmail = Console.ReadLine();
-
-    user.AtualizarDados(novoNome, novoEmail); // usando método da classe User
-
+    
     Console.WriteLine("Usuário atualizado!");
     }
 

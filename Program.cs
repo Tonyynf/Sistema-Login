@@ -10,7 +10,7 @@ public class Program
         var userRepository = new UserRepository();
         while (true)
         {
-            Console.WriteLine("Menu:\n1 - Cadastro\n2 - Mostrar lista de usuarios\n3 - Exclusão de conta\n4 - Alteração dados\n5 - Sair");
+            Console.WriteLine("Menu:\n1 - Cadastro\n2 - Mostrar lista de usuarios\n3 - Exclusão de conta\n4 - Alteração dados\n5 - Sair\n");
             //Adicionar no menu a opção - login -
             int op = int.Parse(Console.ReadLine());
 
@@ -25,7 +25,7 @@ public class Program
                     string Senha = Console.ReadLine();
 
                     userRepository.AddUser(nomeCompleto, Email, Senha);
-                
+
                     break;
                 case 2:
                     userRepository.ShowUsers();
@@ -36,17 +36,27 @@ public class Program
                     userRepository.DeleteUser(id);
                     break;
                 case 4:
-                    //int id = int.Parse(Console.ReadLine());
-                    //userRepository.UpdateUser(id); //colocar o id para criar automaticamente
+                    Console.WriteLine("Digite o id do usuário:");
+                    int idUser = int.Parse(Console.ReadLine());
+
+                    Console.Write("Digite um novo nome: ");
+                    string novoNome = Console.ReadLine();
+
+                    Console.Write("Digite um novo email: ");
+                    string novoEmail = Console.ReadLine();
+
+                    userRepository.UpdateUser(idUser, novoNome, novoEmail); //colocar o id para criar automaticamente
                     break;
                 case 5:
                     Environment.Exit(0);
                     break;
                 default:
-                    Console.WriteLine("Opção Inválida!");
+                    Console.WriteLine("\nOpção Inválida!");
                     break;
             }
-            
+            Console.WriteLine("Pressione qualquer tecla para continuar...");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }

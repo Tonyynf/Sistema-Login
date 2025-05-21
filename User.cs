@@ -8,7 +8,7 @@ using Microsoft.VisualBasic;
 public class User
 {
     private static int proximoId = 1;
-    public int Id { get; private set; }
+    public int Id { get;}
     public string nome { get; private set; }
     public string email { get; private set; }
     private string senhaHash;
@@ -19,12 +19,12 @@ public class User
         this.nome = nome;
         this.email = email;
         this.senhaHash = HashHelper.GerarHash(senha);
-    }     
-    
+    }
+
     public void AtualizarDados(string novoNome, string novoEmail)
-    {   
-    nome = novoNome;
-    email = novoEmail;
+    {
+        nome = novoNome;
+        email = novoEmail;
     }
 
 }

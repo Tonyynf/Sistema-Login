@@ -8,10 +8,11 @@ public class Program
     static void Main(string[] args)
     {
         var userRepository = new UserRepository();
+        
         while (true)
         {
-            Console.WriteLine("Menu:\n1 - Cadastro\n2 - Mostrar lista de usuarios\n3 - Exclusão de conta\n4 - Alteração dados\n5 - Sair\n");
-            //Adicionar no menu a opção - login -
+            Console.WriteLine("Menu:\n1 - Cadastro\n2 - Mostrar lista de usuarios\n3 - Exclusão de conta\n4 - Alteração dados\n5 - Login\n6 - Sair\n");
+
             int op = int.Parse(Console.ReadLine());
 
             switch (op)
@@ -36,7 +37,7 @@ public class Program
                     userRepository.DeleteUser(id);
                     break;
                 case 4:
-                    Console.WriteLine("Digite o id do usuário:");
+                    Console.Write("Digite o número do seu id: ");
                     int idUser = int.Parse(Console.ReadLine());
 
                     Console.Write("Digite um novo nome: ");
@@ -48,13 +49,23 @@ public class Program
                     userRepository.UpdateUser(idUser, novoNome, novoEmail); //colocar o id para criar automaticamente
                     break;
                 case 5:
+                    Console.WriteLine("Login");
+                    Console.Write("Digite seu email: ");
+                    string EmailLogin = Console.ReadLine();
+                    Console.Write("Digite sua senha: ");
+                    string SenhaLogin = Console.ReadLine();
+
+                    userRepository.LoginUser(EmailLogin,SenhaLogin);
+                    break;
+                case 6:
+
                     Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("\nOpção Inválida!");
                     break;
             }
-            Console.WriteLine("Pressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadKey();
             Console.Clear();
         }

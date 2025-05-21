@@ -14,40 +14,63 @@ public class UserRepository
 
     public void ShowUsers()
     {
-        if (Users.Count == 0){
+        if (Users.Count == 0)
+        {
             Console.WriteLine("Nenhum usuário cadastrado.");
-        }else{
+        }
+        else
+        {
             Console.WriteLine("ID - Nome - Email");
-            foreach (User User in Users){
+            foreach (User User in Users)
+            {
                 Console.WriteLine($"{User.Id} - {User.nome} - {User.email}");
             }
         }
     }
 
-    public void UpdateUser(int id, string nome, string email){
-        var user = Users.Find(u => u.Id == id);
+    public void UpdateUser(int id, string nome, string email)
+    {
+        var user = Users.Find(user => user.Id == id);
         if (user == null)
         {
-        Console.WriteLine("Usuário não encontrado.");
-        return;
+            Console.WriteLine("Usuário não encontrado.");
+            return;
         }
 
-    
-    Console.WriteLine("Usuário atualizado!");
+        user.nome = nome;
+        user.email = email;
+
+        Console.WriteLine("Usuário atualizado!");
     }
 
-    public void DeleteUser(int id)
+    public void DeleteUser(int
+    id)
     {
         var user = Users.Find(user => user.Id == id);
 
         if (user != null)
         {
-            Users.RemoveAt(id);
+            Users.Remove(user);
             Console.WriteLine("Usuário excluido!");
         }
         else
         {
             Console.WriteLine("Usuário não encontrado!");
         }
+    }
+
+    public void LoginUser(string email, string senha)
+    {
+        var user = Users.Find(user => user.email == email && user.senha == senha);
+
+        if (user != null)
+        {
+            Console.WriteLine($"Bem-vindo, {user.nome}!");
+        }
+        else
+        {
+            Console.WriteLine("Usuário não encontrado!");
+        }
+        
     }
 }

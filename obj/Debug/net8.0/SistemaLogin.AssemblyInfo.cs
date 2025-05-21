@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaLogin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b5c209070021754992eb3d07802a9de02d88ab3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f3fcdd6b9dea37afef148a3e6848e6f04fdf15d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaLogin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaLogin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

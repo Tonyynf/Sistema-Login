@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection.Metadata;
 using System.ComponentModel;
 
+
 public class Program
 {
     static void Main(string[] args)
@@ -20,19 +21,22 @@ public class Program
                 case 1:
                     Console.Write("Nome completo: ");
                     string nomeCompleto = Console.ReadLine();
-                    Console.Write("Email: "); //Fazer personalização para verificar se email mesmo
+                    Console.Write("Email: "); 
                     string Email = Console.ReadLine();
+                    if (!User.ValidarEmail(Email)){
+                        Console.WriteLine("\nO email precisa conter o @! Tente novamente.");
+                        break;
+                    }
                     Console.Write("Senha: ");
                     string Senha = Console.ReadLine();
 
                     userRepository.AddUser(nomeCompleto, Email, Senha);
-
                     break;
                 case 2:
                     userRepository.ShowUsers();
                     break;
                 case 3:
-                    Console.Write("Digite o número do seu id: "); //Colocar tipo uma "certeza que é sua conta"
+                    Console.Write("Digite o número do seu id: ");
                     int id = int.Parse(Console.ReadLine());
                     userRepository.DeleteUser(id);
                     break;
@@ -46,7 +50,12 @@ public class Program
                     Console.Write("Digite um novo email: ");
                     string novoEmail = Console.ReadLine();
 
-                    userRepository.UpdateUser(idUser, novoNome, novoEmail); //colocar o id para criar automaticamente
+                    if (!User.ValidarEmail(novoEmail))
+                    {
+                        Console.WriteLine("\nO email precisa conter o @! Tente novamente.");
+                        break;
+                    }
+                    userRepository.UpdateUser(idUser, novoNome, novoEmail);
                     break;
                 case 5:
                     Console.WriteLine("Login");
@@ -58,7 +67,6 @@ public class Program
                     userRepository.LoginUser(EmailLogin,SenhaLogin);
                     break;
                 case 6:
-
                     Environment.Exit(0);
                     break;
                 default:

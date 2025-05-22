@@ -3,12 +3,13 @@ using System.Net.WebSockets;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography;
 using Microsoft.VisualBasic;
+using System.Text.RegularExpressions;
 
 
 public class User
 {
     private static int proximoId = 1;
-    public int Id { get;}
+    public int Id { get; }
     public string nome { get; private set; }
     public string email { get; private set; }
     private string senhaHash;
@@ -27,8 +28,18 @@ public class User
         email = novoEmail;
     }
 
-    public bool ValidarSenha(string senha){
+    public bool ValidarSenha(string senha)
+    {
         return senhaHash == HashHelper.GerarHash(senha);
+    }
+    public static bool ValidarEmail(string email)
+    {
+        string regex = @"^([\w\.\-]+)@([\w\-]+)\.([\w]{2,})+";
+        if (email == null)
+        {
+            return false;
+        }
 
+        return Regex.IsMatch(email, regex);
     }
 }

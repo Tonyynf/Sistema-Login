@@ -20,7 +20,7 @@ public class UserRepository
         }
         else
         {
-            Console.WriteLine("ID - Nome - Email");
+            Console.WriteLine("ID | Nome | Email");
             foreach (User User in Users)
             {
                 Console.WriteLine($"{User.Id} - {User.nome} - {User.email}");
@@ -36,10 +36,7 @@ public class UserRepository
             Console.WriteLine("Usuário não encontrado.");
             return;
         }
-
-        user.nome = nome;
-        user.email = email;
-
+        user.AtualizarDados(nome,email);
         Console.WriteLine("Usuário atualizado!");
     }
 
@@ -61,7 +58,7 @@ public class UserRepository
 
     public void LoginUser(string email, string senha)
     {
-        var user = Users.Find(user => user.email == email && user.senha == senha);
+        var user = Users.Find(user => user.email == email && user.ValidarSenha(senha));
 
         if (user != null)
         {

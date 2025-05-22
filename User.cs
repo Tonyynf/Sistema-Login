@@ -27,4 +27,8 @@ public class User
         email = novoEmail;
     }
 
+    public bool ValidarSenha(string senha){
+        return senhaHash == HashHelper.GerarHash(senha);
+
+    }
 }
